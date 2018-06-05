@@ -9,6 +9,14 @@
         "origin": true,
         "credentials": true,
         "maxAge": 86400
+      },
+      "morgan": {
+        "params": [
+          "dev",
+          {
+            "buffer": true
+          }
+        ]
       }
     },
     "helmet#xssFilter": {},
@@ -40,7 +48,11 @@
       ]
     }
   },
-  "files": {},
+  "files": {
+    "loopback#static": {
+      "params": "$!../client"
+    }
+  },
   "final": {
     "loopback#urlNotFound": {}
   },
